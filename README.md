@@ -1,5 +1,9 @@
 # setup_files
+Jason Sinn's collection of setup files for a new machine. Work in progress, but currently contains just dotfiles.  
 
+## Screenshots
+![Alt text](screenshot-1.png?raw=true)
+  
 ## Theme
 
 Install unity-tweak-tool:
