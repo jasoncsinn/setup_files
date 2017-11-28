@@ -116,9 +116,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Load environment variables
 source /etc/environment
+
+# set default text editor to sublime
 export VISUAL="/usr/bin/sublime"
 export EDITOR="$VISUAL"
+
+# disable xoff/xon (ctrl + s, ctrl + q)
+stty -ixon
 
 # base16
 BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-default-dark-gnome.sh"

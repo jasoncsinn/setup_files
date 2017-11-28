@@ -6,28 +6,12 @@ Jason Sinn's collection of setup files for a new machine. Work in progress, but 
   
 ## Theme
 
-Install unity-tweak-tool:
+Install gnome-tweak-tool:
 
 ```
-sudo apt-get install unity-tweak-tool
+sudo apt install gnome-tweak-tool
 ```
-
-Install Materia from: https://github.com/nana-4/materia-theme  
-
-Install Paper Icons:
-```
-sudo add-apt-repository ppa:snwh/pulp
-# update repository info
-sudo apt-get update
-# install icon theme
-sudo apt-get install paper-icon-theme
-# install cursor theme
-sudo apt-get install paper-cursor-theme
-# install gtk theme
-sudo apt-get install paper-gtk-theme
-```
-
-Install arc-dark for firefox from: https://addons.mozilla.org/en-US/firefox/collections/horst3180/a/
+Install Arc-Shadow from https://github.com/LinxGem33/OSX-Arc-Shadow
 
 ## Shell
 ### base16 shell:
