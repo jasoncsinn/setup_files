@@ -71,8 +71,8 @@ set incsearch       " incremental searching
 set ignorecase      " ignore case while searching
 
 " Mappings
-map <F7> :NERDTreeToggle<CR>
-map <F8> :SyntasticCheck<CR>
+map <C-n> :NERDTreeToggle<CR>
+map <C-v> :SyntasticCheck<CR>
 
 " Colors
 let base16colorspace=256

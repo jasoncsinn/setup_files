@@ -116,8 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=$HOME/bin:$PATH
+source /etc/environment
+export VISUAL="/usr/bin/sublime"
+export EDITOR="$VISUAL"
 
 # base16
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-default-dark-gnome.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
