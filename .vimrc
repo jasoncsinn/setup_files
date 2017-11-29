@@ -70,25 +70,23 @@ set number          " show line numbers
 set incsearch       " incremental searching
 set ignorecase      " ignore case while searching
 
-" Mappings
+" Leader and Plugin Mappings
 let mapleader=" "
 noremap <leader>n :NERDTreeToggle<CR>
 map <leader>v :SyntasticCheck<CR>
 
-" Go to tab by number
-noremap <leader>1 1gt
-noremap <leader>2 2gt
-noremap <leader>3 3gt
-noremap <leader>4 4gt
-noremap <leader>5 5gt
-noremap <leader>6 6gt
-noremap <leader>7 7gt
-noremap <leader>8 8gt
-noremap <leader>9 9gt
+" Go to window with arrow keys
 noremap <leader><Left> <C-w>h
 noremap <leader><Right> <C-w>l
 noremap <leader><Up> <C-w>k
 noremap <leader><Down> <C-w>j
+
+" Buffer Mappings
+nmap <leader>t :enew<CR>
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
+nmap <leader>bq :bp <BAR> bd #<CR>
+nmap <leader>bl :ls<CR>
 
 " Colors
 let base16colorspace=256
