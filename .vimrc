@@ -71,8 +71,24 @@ set incsearch       " incremental searching
 set ignorecase      " ignore case while searching
 
 " Mappings
-map <C-n> :NERDTreeToggle<CR>
-map <C-v> :SyntasticCheck<CR>
+let mapleader=" "
+noremap <leader>n :NERDTreeToggle<CR>
+map <leader>v :SyntasticCheck<CR>
+
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader><Left> <C-w>h
+noremap <leader><Right> <C-w>l
+noremap <leader><Up> <C-w>k
+noremap <leader><Down> <C-w>j
 
 " Colors
 let base16colorspace=256
