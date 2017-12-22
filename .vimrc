@@ -17,11 +17,19 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux'
+Plugin 'airblade/vim-gitgutter'
+
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'nvie/vim-flake8'
+"Bundle 'Valloric/YouCompleteMe'
+
+Plugin 'derekwyatt/vim-scala'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -58,6 +66,10 @@ let g:airline#extensions#tabline#fnamemod = ':t' " Show just the filename
 let g:airline#extensions#branch#enabled = 1 " Enable branches
 let g:airline_theme='base16'
 
+" Gitgutter
+let g:gitgutter_override_sign_column_highlight = 0
+set updatetime=250
+
 " Misc Settings
 syntax on
 set laststatus=2    " always show status line
@@ -69,6 +81,25 @@ set expandtab
 set number          " show line numbers
 set incsearch       " incremental searching
 set ignorecase      " ignore case while searching
+
+" Python settings
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+let python_highlight_all=1
+syntax on
+
+" Full Stack settings
+ au BufNewFile,BufRead *.js, *.html, *.css
+     \ set tabstop=2
+     \ set softtabstop=2
+     \ set shiftwidth=2
 
 " Leader and Plugin Mappings
 let mapleader=" "
