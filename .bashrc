@@ -126,6 +126,32 @@ export EDITOR="$VISUAL"
 # disable xoff/xon (ctrl + s, ctrl + q)
 stty -ixon
 
+# use dev environment settings
+export DEV_ENVIRONMENT="ACUITY, PYTHON"
+
+if [[ $DEV_ENVIRONMENT == *"ACUITY"* ]] || [[ $DEV_ENVIRONMENT == *"JAVA"* ]]; then
+    export JAVA_TOOL_OPTIONS="-Dspring.profiles.active=LOCAL -Dfile.encoding=UTF8"
+    export JAVA_7_HOME="/usr/java/jdk1.7.0_80"
+    export JAVA_8_HOME="/usr/java/jdk1.8.0_151"
+    export JAVA_HOME=$JAVA_7_HOME
+    export GRADLE_HOME="/usr/share/gradle" # Installed using sudo apt install gradle
+
+    alias use_java7='export JAVA_HOME=$JAVA_7_HOME'
+    alias use_java8='export JAVA_HOME=$JAVA_8_HOME'
+    alias use_java_jdk='$JAVA_HOME/bin/java'
+    alias intellij="/opt/idea-IU-172.4574.11/bin/./idea.sh" # Hack to start IntelliJ, manual extraction
+fi
+
+if [[ $DEV_ENVIRONMENT == *"ACUITY"* ]] && [ -f ~/.acuity_bashrc.sh ]; then
+    source ~/.acuity_bashrc.sh
+fi
+
+if [[ $DEV_ENVIRONMENT == *"PYTHON"* ]]; then
+    # Alias for virtualenv MLenv
+    alias mlenv_start="source ~/ml_env/bin/activate"
+    alias mlenv_stop="deactivate"
+fi
+
 # base16
 BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-default-dark-gnome.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL

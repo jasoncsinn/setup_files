@@ -24,6 +24,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'ervandew/supertab'
+Plugin 'kien/rainbow_parentheses.vim'
 
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'nvie/vim-flake8'
