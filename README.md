@@ -1,17 +1,15 @@
 # setup_files
 Jason Sinn's collection of setup files for a new machine. Work in progress, but currently contains just dotfiles.  
 
-## Screenshots
-![Alt text](screenshot-1.png?raw=true)
-  
 ## Theme
 
-Install gnome-tweak-tool:
-
-```
-sudo apt install gnome-tweak-tool
-```
-Install Arc-Shadow from https://github.com/LinxGem33/OSX-Arc-Shadow
+Current setup: **Gnome**
+- **Theme**: Materia-dark (including gnome-shell)
+- **Icons**: Papirus-dark
+- **Dash**: Dash-to-Dock
+- Drop down terminal
+- **Conky**: https://github.com/addy-dclxvi/conky-theme-collections
+- **Transparency**: ~20%
 
 ## Shell
 ### base16 shell:
