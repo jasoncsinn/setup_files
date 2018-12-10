@@ -127,19 +127,26 @@ export EDITOR="$VISUAL"
 stty -ixon
 
 # use dev environment settings
-export DEV_ENVIRONMENT="ACUITY, PYTHON"
+export DEV_ENVIRONMENT="ACUITY, SCALA"
 
 if [[ $DEV_ENVIRONMENT == *"ACUITY"* ]] || [[ $DEV_ENVIRONMENT == *"JAVA"* ]]; then
     export JAVA_TOOL_OPTIONS="-Dspring.profiles.active=LOCAL -Dfile.encoding=UTF8"
     export JAVA_7_HOME="/usr/java/jdk1.7.0_80"
     export JAVA_8_HOME="/usr/java/jdk1.8.0_151"
-    export JAVA_HOME=$JAVA_7_HOME
-    export GRADLE_HOME="/usr/share/gradle" # Installed using sudo apt install gradle
+    export JAVA_HOME=$JAVA_8_HOME
+    export GRADLE_HOME="$HOME/IntelliJ/gradle-3.4.1" 
+    export CATALINA_HOME="$HOME/apache-tomcat-8.0.33"
+    export CATALINA_BASE="$HOME/apache-tomcat-8.0.33"
 
     alias use_java7='export JAVA_HOME=$JAVA_7_HOME'
     alias use_java8='export JAVA_HOME=$JAVA_8_HOME'
     alias use_java_jdk='$JAVA_HOME/bin/java'
-    alias intellij="/opt/idea-IU-172.4574.11/bin/./idea.sh" # Hack to start IntelliJ, manual extraction
+    alias spark='$HOME/IntelliJ/spark-2.2.1-bin-hadoop2.7/bin/spark-shell'
+fi
+
+if [[ $DEV_ENVIRONMENT == *"SCALA"* ]]; then
+    export SCALA_HOME=~/tools/scala-2.11.12
+    export PATH=$PATH:$SCALA_HOME/bin
 fi
 
 if [[ $DEV_ENVIRONMENT == *"ACUITY"* ]] && [ -f ~/.acuity_bashrc.sh ]; then

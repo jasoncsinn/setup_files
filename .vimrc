@@ -127,6 +127,7 @@ colorscheme base16-default-dark
 
 " Custom colors
 hi LineNr                    ctermfg=white   ctermbg=black
+hi Normal                    guibg=NONE      ctermbg=NONE
 " hi vertsplit                 ctermfg=darkgray   ctermbg=darkgray
 hi SyntasticStyleWarningSign ctermfg=yellow  ctermbg=black
 hi SyntasticStyleErrorSign   ctermfg=red     ctermbg=black
