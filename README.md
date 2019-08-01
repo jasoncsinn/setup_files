@@ -3,7 +3,14 @@ Jason Sinn's collection of setup files for a new machine. Work in progress, but 
 
 ## Theme
 
-Current setup: **Gnome**
+setup: **ElementaryOS**
+- **GTK Theme**: macOS-5.0
+- **Icons**: Flat-Remix-Blue
+- **Cursor**: elementary
+- **Window Controls - Layout**: OS X
+- **Font**: Helvetica Neue
+
+setup: **Gnome-Ubuntu**
 - **Theme**: Materia-dark (including gnome-shell)
 - **Icons**: Papirus-dark
 - **Dash**: Dash-to-Dock
